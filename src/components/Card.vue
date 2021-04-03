@@ -46,17 +46,16 @@ a{
         }
     }
 }
+}
 
 @media screen and (max-width: 500px) {
-    .card{
+    a{
        max-width: calc(100% / 2); 
     }        
 }
-}
-
 
 @media screen and (max-width: 370px) {
-    .card{
+    a{
        max-width: calc(100%); 
     }        
 }
