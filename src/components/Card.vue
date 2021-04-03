@@ -1,8 +1,11 @@
 <template>
-  <div class="card">
+  <a :href="anime.url" target="_blank">
+    <div class="card">
       <img class="card-img" :src="anime.image_url" alt="Naruto img">
       <h3>{{ anime.title }}</h3>
-  </div>
+    </div>
+  </a>
+  
 </template>
 
 <script>
@@ -13,9 +16,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.card{
+a{
+    text-decoration: none;
+    display: inline-block;
     width: 100%;
     max-width: calc(100% / 3);
+    color: #313131;
+
+    .card{
+    width: 100%;
     padding: 10px;
     margin-top: 10px;
     cursor: pointer;
@@ -43,6 +52,8 @@ export default {
        max-width: calc(100% / 2); 
     }        
 }
+}
+
 
 @media screen and (max-width: 370px) {
     .card{
