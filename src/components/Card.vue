@@ -1,13 +1,14 @@
 <template>
   <div class="card">
-      <img class="card-img" src="https://place-hold.it/150x250" alt="Naruto img">
-      <h3>Naruto</h3>
+      <img class="card-img" :src="anime.image_url" alt="Naruto img">
+      <h3>{{ anime.title }}</h3>
   </div>
 </template>
 
 <script>
 export default {
-    name: "Card"
+    name: "Card",
+    props: ["anime"]
 }
 </script>
 
@@ -40,6 +41,12 @@ export default {
 @media screen and (max-width: 500px) {
     .card{
        max-width: calc(100% / 2); 
+    }        
+}
+
+@media screen and (max-width: 370px) {
+    .card{
+       max-width: calc(100%); 
     }        
 }
 </style>
